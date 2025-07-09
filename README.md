@@ -1,7 +1,5 @@
 # xgb_mlp_ensemble_with_outlier_adjusted – Strategy Overview
 
-Below you will find concise English explanations of each key strategy implemented in `xgb_mlp_ensemble_with_outlier_adjusted.ipynb`. Copy‑paste or extend these sections as needed for your project documentation.
-
 ## 1  Feature Engineering
 The notebook begins by enriching the raw limit‑order‑book feed with domain‑specific signals. It derives price‑depth interactions (e.g., `bid_qty × ask_qty`), logarithmic volume measures, buy‑sell pressure ratios, and a configurable set of lag/lead features that capture short‑term temporal structure. All missing values introduced by these transformations are imputed with column means to maintain a dense input matrix. This engineered feature space gives subsequent models both instantaneous and lagged context on market microstructure behaviour.
 
